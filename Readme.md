@@ -20,7 +20,7 @@ And much more.
 
 It is built using Python, [libmelee](https://github.com/altf4/libmelee), and [PureData](http://puredata.info/).
 
-The Python program communicates with PureData over the [Open Sound Control (OSC)](http://opensoundcontrol.org/) protocol. Currently, the only Pure Data patch designed for an entire match was constructed using the synth "Automatonism" by Johan Eriksson (https://www.automatonism.com/).
+The Python program communicates with PureData over the [Open Sound Control (OSC)](http://opensoundcontrol.org/) protocol. Currently, the only Pure Data patch designed for an entire match was constructed using the synth [Automatonism](https://www.automatonism.com/) by Johan Eriksson .
 
 It was built off of the work done by github user altf4 on his [SmashBot](https://github.com/altf4/SmashBot) AI project.
 
