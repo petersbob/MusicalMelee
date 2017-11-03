@@ -1,0 +1,114 @@
+#N canvas 4 23 1224 722 10;
+#X obj 15 251 route key abs;
+#X obj 15 396 tgl 25 0 empty empty empty 0 -6 0 8 -195568 -1 -1 0 1
+;
+#X obj 65 396 tgl 25 0 empty empty empty 0 -6 0 8 -195568 -1 -1 0 1
+;
+#X obj 115 396 tgl 25 0 empty empty empty 0 -6 0 8 -195568 -1 -1 0
+1;
+#X obj 165 396 tgl 25 0 empty empty empty 0 -6 0 8 -195568 -1 -1 0
+1;
+#X obj 215 396 tgl 25 0 empty empty empty 0 -6 0 8 -195568 -1 -1 0
+1;
+#X obj 265 396 tgl 25 0 empty empty empty 0 -6 0 8 -195568 -1 -1 0
+1;
+#X obj 315 396 tgl 25 0 empty empty empty 0 -6 0 8 -195568 -1 -1 0
+1;
+#X obj 365 396 tgl 25 0 empty empty empty 0 -6 0 8 -195568 -1 -1 0
+1;
+#X obj 415 396 tgl 25 0 empty empty empty 0 -6 0 8 -195568 -1 -1 0
+1;
+#X obj 465 396 tgl 25 0 empty empty empty 0 -6 0 8 -195568 -1 -1 0
+1;
+#X obj 515 396 tgl 25 0 empty empty empty 0 -6 0 8 -195568 -1 -1 0
+1;
+#X obj 565 396 tgl 25 0 empty empty empty 0 -6 0 8 -195568 -1 -1 0
+1;
+#X floatatom 632 293 6 0 0 0 - - -;
+#X floatatom 682 293 6 0 0 0 - - -;
+#X floatatom 732 293 6 0 0 0 - - -;
+#X floatatom 782 293 6 0 0 0 - - -;
+#X floatatom 832 293 6 0 0 0 - - -;
+#X msg 48 152 close;
+#X msg 15 20 print;
+#X obj 632 272 route abs_x abs_y abs_z abs_rz hatswitch;
+#X obj 15 223 hid;
+#X text 81 77 Select your controller based on its value in the PD console.
+;
+#X text 89 106 Begin polling HID. This is the sample rate for control
+input. It could by synchronized with melees frame lag.;
+#X obj 15 354 route btn_0 btn_1 btn_2 btn_3 btn_4 btn_5 btn_6 btn_7
+btn_8 btn_9 btn_10 btn_11 btn_12 btn_13 btn_14 btn_15;
+#X text 13 453 All of the button presses should be represented here.
+;
+#X text 62 12 The print message shows all the available devices in
+the PD console. If your controller doesn't show up \, make sure the
+controller is plugged before you start PD.;
+#X text 622 334 The joystick and c stick should be here along with
+an eight value representation of the d pad.;
+#X text 16 475 General note: I have tried using two controllers simultaneously.
+It works fine with me using a logitech controller and a ps3 controller
+both connected through usb.;
+#X msg 27 80 open 4;
+#X msg 41 111 poll 16;
+#X obj 74 56 inlet;
+#X obj 632 312 outlet;
+#X obj 682 312 outlet;
+#X obj 732 312 outlet;
+#X obj 782 312 outlet;
+#X obj 832 312 outlet;
+#X obj 15 432 outlet;
+#X obj 65 432 outlet;
+#X obj 115 432 outlet;
+#X obj 165 432 outlet;
+#X obj 215 432 outlet;
+#X obj 265 432 outlet;
+#X obj 315 432 outlet;
+#X obj 365 432 outlet;
+#X obj 415 432 outlet;
+#X obj 465 432 outlet;
+#X obj 515 432 outlet;
+#X obj 565 432 outlet;
+#X connect 0 0 24 0;
+#X connect 0 1 20 0;
+#X connect 1 0 37 0;
+#X connect 2 0 38 0;
+#X connect 3 0 39 0;
+#X connect 4 0 40 0;
+#X connect 5 0 41 0;
+#X connect 6 0 42 0;
+#X connect 7 0 43 0;
+#X connect 8 0 44 0;
+#X connect 9 0 45 0;
+#X connect 10 0 46 0;
+#X connect 11 0 47 0;
+#X connect 12 0 48 0;
+#X connect 13 0 32 0;
+#X connect 14 0 33 0;
+#X connect 15 0 34 0;
+#X connect 16 0 35 0;
+#X connect 17 0 36 0;
+#X connect 18 0 21 0;
+#X connect 19 0 21 0;
+#X connect 20 0 13 0;
+#X connect 20 1 14 0;
+#X connect 20 2 15 0;
+#X connect 20 3 16 0;
+#X connect 20 4 17 0;
+#X connect 21 0 0 0;
+#X connect 24 0 1 0;
+#X connect 24 1 2 0;
+#X connect 24 2 3 0;
+#X connect 24 3 4 0;
+#X connect 24 4 5 0;
+#X connect 24 5 6 0;
+#X connect 24 6 7 0;
+#X connect 24 7 8 0;
+#X connect 24 8 9 0;
+#X connect 24 9 10 0;
+#X connect 24 10 11 0;
+#X connect 24 11 12 0;
+#X connect 29 0 21 0;
+#X connect 30 0 21 0;
+#X connect 31 0 21 0;
+#X coords 0 -1 1 1 250 10 1 100 100;
